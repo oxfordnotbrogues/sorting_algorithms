@@ -2,6 +2,7 @@
 #define SORT_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -33,4 +34,8 @@ int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right);
 /*shell sort_knuth sequence*/
 void shell_sort(int *array, size_t size);
+/*cocktail shaker sort*/
+void swap_node_ahead(listint_t **list, listint_t **tail, listint_t **shaker);
+void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker);
+void cocktail_sort_list(listint_t **list);
 #endif
